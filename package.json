@@ -4,7 +4,7 @@
   "description": "A CLI application of the ol' classic Tic Tac Toe for MYOB's Future Makers Academy",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/linda-lai/TicTacToe/issues"
   },
-  "homepage": "https://github.com/linda-lai/TicTacToe#readme"
+  "homepage": "https://github.com/linda-lai/TicTacToe#readme",
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "inquirer": "^6.5.0"
+  }
 }
