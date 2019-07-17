@@ -1,5 +1,5 @@
 {
-  "name": "tictactoe",
+  "name": "myob-fma-tic-tac-toe",
   "version": "1.0.0",
   "description": "A CLI application of the ol' classic Tic Tac Toe for MYOB's Future Makers Academy",
   "main": "app.js",
