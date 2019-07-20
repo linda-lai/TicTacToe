@@ -177,16 +177,7 @@ Due to the advantages of using the Inquirer package to render a list of selectio
 Because of this design, the main/only error handler required was if a tile had already been taken by another player, thereby minimising the potential for players to force errors when running the app.
 
 ## Challenges
-### Challenge 1: Testing
-Until recently, I'd had limited exposure to testing or Test Driven Development from my recent work experience or education so I welcome the impetus to further build up my competence in this area, particularly as unit testing seems naturally suited to functional programming, and the importance of testing in the overall software development cycle.
-
-While I aimed to implement a TDD approach to my solution, trying to do this while learning about testing and using Jest proved to be too much of a impediment and made it difficult to find a way to start or make progress. Past experience taught me to start and do what I could to get some early wins and to timebox my analysis/attempts to keep up my momentum and sense of progress.
-
-Rather than continuing down a path of resistance, I tried to follow the principles behind it since I couldn't do the practice: writing out my steps in pseudocode, getting a working function up as quickly as I could, use `console.log` throughout my application repeatedly to get feedback, and refactoring the function to do/return only one thing. Being able to further experiment with Jest syntax and matchers writing some basic tests, I walked away with a much stronger understanding of what I should test through the development of my application (albeit perhaps not how) and appreciation for how it compels you to refactor and simplify your code.
-
-Moving forward, I would love to spend more time outside of this challenge learning about testing given the steep learning curve I've felt when it comes to implementing unit/integration testing on more complex functions and data calls. However, this experience has reinforced to me how tests make your code more robust and modular, and importance of testing in production/real-life for reliability and scalability.
-
-### Challenge 2: Asynchronous JavaScript
+### Challenge 1: Asynchronous JavaScript
 An interesting (and occasionally maddening!) challenge for this assignment was coming to terms with the asynchronous nature of Node - being more familiar with JavaScript in the DOM with friendly helpers like state management and web APIs to aid with managing the flow of data and functions forced me to think in more abstract/programmatic terms about why JavaScript behaves as it does, and the overall data and function flow without the immediate visual feedback that frontend provides.
 
 ![Why So Asynchronous?](/docs/asynchronous.png)
@@ -194,6 +185,15 @@ An interesting (and occasionally maddening!) challenge for this assignment was c
 Using Node, I've come to appreciate how promises and async/await have helped to improve developer user experience, though fully grasping the concept and implementation of both still represents an ongoing learning process. One of the biggest learning curves, pain points and eventual win for me was figuring out how to stitch my functions together using these (and so, so many console.logs!).
 
 In future, I would like to  implement a less manual approach to stepping through my functions and application flow by learning how to utilise debugging tools.
+
+### Challenge 2: Testing
+Until recently, I'd had limited exposure to testing or Test Driven Development from my recent work experience or education so I welcome the impetus to further build up my competence in this area, particularly as unit testing seems naturally suited to functional programming, and the importance of testing in the overall software development cycle.
+
+While I aimed to implement a TDD approach to my solution, trying to do this while learning about testing and using Jest proved to be too much of a impediment and made it difficult to find a way to start or make progress. Past experience taught me to start and do what I could to get some early wins and to timebox my analysis/attempts to keep up my momentum and sense of progress. While there were points where I attempted to refactor my code to make them easier to test, it required passing 4+ arguments to it, and seemed to add unnecessary layers of complexity that did not make my code functionally better or more readable.
+
+Rather than continuing down a path of resistance, I tried to follow the principles behind it since I couldn't do the practice: writing out my steps in pseudocode, getting a working function up as quickly as I could, use `console.log` throughout my application repeatedly to get feedback, and refactoring the function to do/return only one thing. Being able to further experiment with Jest syntax and matchers writing some basic tests, I walked away with a much stronger understanding of what I should test through the development of my application (albeit perhaps not how) and appreciation for how it compels you to refactor and simplify your code.
+
+Moving forward, I would love to spend more time outside of this challenge learning about testing given the steep learning curve I've felt when it comes to implementing unit/integration testing on more complex functions and data calls. However, this experience has reinforced to me how tests make your code more robust and modular, and importance of testing in production/real-life for reliability and scalability.
 
 ### Challenge 3: UX/UI
 One of the most fun aspects of the challenge was styling the UI. Building up the visual elements to be rendered also enabled me to better visualise and think through the overall application flow. The simplicity of the console display enabled me to be creative about how and where I could inject some colour and personality into the application through the output whilst also giving users meaningful feedback, using styling where I could to highlight useful information and provide some kind of visual hierarchy.
@@ -203,7 +203,7 @@ Overall while I'm happy with my application's core functionality, as always ther
 
 I'd like to use the code review as an opportunity to understand what I did well/could improve before implementing further improvements or changes, either within my code or the CLI display.
 
-* **Testing**: Being such an important aspect of the software development cycle, the first thing I would do is learn how to implement more (and better) unit and integration tests. When trying to test my application, the difficulty of doing this for more complex functions signalled to me that some further refactoring was required to simplify this. After my submission has been evaluated, it is something I would definitely like to work on implementing further after additional refactoring given my understanding of Jest and the design of my application.
+* **Testing**: Being such an important aspect of the software development cycle, I'd love to learn how to implement more (and better) tests. When trying to test my application, the difficulty of doing this for more complex functions signalled to me that some further refactoring was required to simplify this, or more sophisticated testing methods like mocks. After my submission has been evaluated, it is something I would definitely like to work on implementing further after additional refactoring given my understanding of Jest and the design of my application.
 * **Navigation**: Implementing further navigation options for players to improve the user experience - currently they do not have an option to exit the application while selecting coordinates and can only do so when a win or draw has been completed.
 * **Design Patterns**: Learning more about functional and object-orientated design patterns and principles to enhance my understanding and decision-making about the benefits and trade-offs of different design approaches, and to train my brain to think about my approach to coding more in those terms.
 

@@ -11,7 +11,7 @@ const {
 
 describe('generateGameBoardDisplay should format the game board to display', () => {
   const mockGameBoard = ['X', null, null, null, 'O', null, null, null, null];
-  test('will take the gameBoard array and format the player markers', async () => {
+  test('generateGameBoardDisplay will take the gameBoard array and format the player markers', async () => {
     const board = await generateGameBoardDisplay(mockGameBoard);
     expect(board).toMatch(` X  *  * \n *  O  * \n *  *  * `);
   })
@@ -37,12 +37,12 @@ describe('mocked functionality of handlePlayerCoordinates() should format player
 })
 
 describe('checkPlayer() should calculate current player based on round and return the correct marker', () => {
-  const player1Round = 1;
-  const player2Round = 2;
   test('should return an X if it is an odd round for player 1', () => {
+    const player1Round = 1;
     expect(checkPlayer(player1Round)).toEqual('X');
   })
   test('should return an O if it is an even round for player 2', () => {
+    const player2Round = 2;
     expect(checkPlayer(player2Round)).toEqual('O');
   })
 })
@@ -81,6 +81,7 @@ describe('mocked functionality of updateGameBoard() should evaluate the player m
     expect(gameBoard[`${playerCoordinates}`]).toBeTruthy();
     expect(typeof gameBoard[`${playerCoordinates}`]).toBe('string');
   })
+
 })
 
 describe('it should check all combinations for a win', () => {
@@ -173,7 +174,7 @@ describe('resetBoard() should iterate through the gameBoard object and reset all
   test('should reset all values in gameBoard object back to null', () => {
     expect(resetBoard(fullBoard)).toEqual(emptyBoard);
   })
-  test('should take the gameBoard object as an argument', () => {
+  test('should take an object as an argument', () => {
     expect(typeof resetBoard(fullBoard)).toBe('object');
   })
 })
