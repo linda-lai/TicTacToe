@@ -11,11 +11,11 @@ const {
 
 describe('generateGameBoardDisplay should format the game board to display', () => {
   const mockGameBoard = ['X', null, null, null, 'O', null, null, null, null];
-  it('will take the gameBoard array and format the player markers', async () => {
+  test('will take the gameBoard array and format the player markers', async () => {
     const board = await generateGameBoardDisplay(mockGameBoard);
     expect(board).toMatch(` X  *  * \n *  O  * \n *  *  * `);
   })
-  it('will take the gameBoard array and format the display into a string', async () => {
+  test('will take the gameBoard array and format the display into a string', async () => {
     const board = await generateGameBoardDisplay(mockGameBoard);
     expect(typeof board).toBe('string');
   })
@@ -24,14 +24,14 @@ describe('generateGameBoardDisplay should format the game board to display', () 
 describe('mocked functionality of handlePlayerCoordinates() should format player coordinate selections', () => {
   const mockPlayerAnswers = { xCoordinate: '1', yCoordinate: '2'}
   const mockInquirerConcatenation = jest.fn().mockReturnValue(mockPlayerAnswers.xCoordinate + mockPlayerAnswers.yCoordinate)
-  it('will create an answers object', () => {
+  test('will create an answers object', () => {
     const mockInquirerPrompt = jest.fn().mockReturnValue(mockPlayerAnswers)
     expect(typeof mockInquirerPrompt()).toBe('object')
   })
-  it('will concatenate the x-coordinate and y-coordinate', () => {
+  test('will concatenate the x-coordinate and y-coordinate', () => {
     expect(mockInquirerConcatenation()).toEqual('12');
   })
-  it('will return a concatenated coordinate string', () => {
+  test('will return a concatenated coordinate string', () => {
     expect(typeof mockInquirerConcatenation()).toBe('string');
   })
 })
@@ -39,10 +39,10 @@ describe('mocked functionality of handlePlayerCoordinates() should format player
 describe('checkPlayer() should calculate current player based on round and return the correct marker', () => {
   const player1Round = 1;
   const player2Round = 2;
-  it('should return an X if it is an odd round for player 1', () => {
+  test('should return an X if it is an odd round for player 1', () => {
     expect(checkPlayer(player1Round)).toEqual('X');
   })
-  it('should return an O if it is an even round for player 2', () => {
+  test('should return an O if it is an even round for player 2', () => {
     expect(checkPlayer(player2Round)).toEqual('O');
   })
 })
@@ -53,10 +53,10 @@ describe('displayGameBoard() should return the result of generateGameBoard displ
     '21': null, '22': 'O', '23': null,
     '31': null, '32': null, '33': null
   }
-  it('should take the gameBoard object as the argument', () => {
+  test('should take the gameBoard object as the argument', () => {
     expect(typeof gameBoard).toBe('object')
   })
-  it('should create an array from the gameBoard object and return a string matching the state of the board', async () => {
+  test('should create an array from the gameBoard object and return a string matching the state of the board', async () => {
     expect(await displayGameBoard(gameBoard)).toMatch(` X  *  * \n *  O  * \n *  *  * `)
   })
 })
@@ -67,16 +67,16 @@ describe('mocked functionality of updateGameBoard() should evaluate the player m
     '21': null, '22': 'O', '23': null,
     '31': null, '32': null, '33': null
   }
-  it('should match playerCoordinates to a key in the gameBoard object', () => {
+  test('should match playerCoordinates to a key in the gameBoard object', () => {
     const playerCoordinates = '11';
     expect(gameBoard[`${playerCoordinates}`]).toMatch('X');
   })
-  it('should check if gameBoard tile has been taken and return falsy if null', () => {
+  test('should check if gameBoard tile has been taken and return falsy if null', () => {
     const playerCoordinates = '12';
     expect(gameBoard[`${playerCoordinates}`]).toBeFalsy();
     expect(gameBoard[`${playerCoordinates}`]).toBeNull();
   })
-  it('should check if gameBoard tile has been taken and return true if X or O', () => {
+  test('should check if gameBoard tile has been taken and return true if X or O', () => {
     const playerCoordinates = '11';
     expect(gameBoard[`${playerCoordinates}`]).toBeTruthy();
     expect(typeof gameBoard[`${playerCoordinates}`]).toBe('string');
@@ -85,7 +85,7 @@ describe('mocked functionality of updateGameBoard() should evaluate the player m
 
 describe('it should check all combinations for a win', () => {
   const playerMarker = 'X';
-  it('should check and return true for a horizontal win', () => {
+  test('should check and return true for a horizontal win', () => {
     const horizontalWin1 = {
       '11': 'X', '12': 'X', '13': 'X',
       '21': null, '22': null, '23': null,
@@ -105,7 +105,7 @@ describe('it should check all combinations for a win', () => {
     expect(checkWin(playerMarker, horizontalWin2)).toEqual(true);
     expect(checkWin(playerMarker, horizontalWin3)).toEqual(true);
   })
-  it('should check and return true for a vertical win', () => {
+  test('should check and return true for a vertical win', () => {
     const verticalWin1 = {
       '11': 'X', '12': null, '13': null,
       '21': 'X', '22': null, '23': null,
@@ -125,7 +125,7 @@ describe('it should check all combinations for a win', () => {
     expect(checkWin(playerMarker, verticalWin2)).toEqual(true);
     expect(checkWin(playerMarker, verticalWin3)).toEqual(true);
   })
-  it('should check and return true for a diagonal win', () => {
+  test('should check and return true for a diagonal win', () => {
     const diagonalWin1 = {
       '11': 'X', '12': null, '13': null,
       '21': null, '22': 'X', '23': null,
@@ -139,7 +139,7 @@ describe('it should check all combinations for a win', () => {
     expect(checkWin(playerMarker, diagonalWin1)).toEqual(true);
     expect(checkWin(playerMarker, diagonalWin2)).toEqual(true);
   })
-  it('should check for a win and return false if a draw', () => {
+  test('should check for a win and return false if a draw', () => {
     const draw1 = {
       '11': 'X', '12': 'O', '13': 'X',
       '21': 'O', '22': 'O', '23': 'X',
@@ -166,14 +166,14 @@ describe('resetBoard() should iterate through the gameBoard object and reset all
     '21': null, '22': null, '23': null,
     '31': null, '32': null, '33': null
   }
-  it('any value in the reset gameBoard object should equal null', () => {
+  test('any value in the reset gameBoard object should equal null', () => {
     const result = resetBoard(fullBoard);
     expect(result['23']).toEqual(null);
   })
-  it('should reset all values in gameBoard object back to null', () => {
+  test('should reset all values in gameBoard object back to null', () => {
     expect(resetBoard(fullBoard)).toEqual(emptyBoard);
   })
-  it('should take the gameBoard object as an argument', () => {
+  test('should take the gameBoard object as an argument', () => {
     expect(typeof resetBoard(fullBoard)).toBe('object');
   })
 })

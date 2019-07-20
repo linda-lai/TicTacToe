@@ -199,7 +199,7 @@ In future, I would like to  implement a less manual approach to stepping through
 One of the most fun aspects of the challenge was styling the UI. Building up the visual elements to be rendered also enabled me to better visualise and think through the overall application flow. The simplicity of the console display enabled me to be creative about how and where I could inject some colour and personality into the application through the output whilst also giving users meaningful feedback, using styling where I could to highlight useful information and provide some kind of visual hierarchy.
 
 ## Future Enhancements and Improvements
-Overall while I'm happy with my application's core functionality, as always there are improvements I'd be itching to implement further down the line. However, I felt it was important to timebox my implementation and force myself to be very deliberate and focused on  the core requirements as possible to deliver the simplest but most efficient/elegant solution I could, lest I fall into a vicious refactoring cycle and over-engineer my application with no clear end in sight.
+Overall while I'm happy with my application's core functionality, as always there are improvements I'd be itching to implement further down the line. However, I felt it was important to timebox my implementation and force myself to be very deliberate and focused on the core requirements to deliver the simplest but most efficient/elegant solution I could, lest I fall into a vicious refactoring cycle and over-engineer my application with no clear end in sight.
 
 I'd like to use the code review as an opportunity to understand what I did well/could improve before implementing further improvements or changes, either within my code or the CLI display.
 
