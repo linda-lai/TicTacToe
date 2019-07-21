@@ -107,7 +107,7 @@ Having just over a week to do the coding challenge while working full-time prove
 I decided to use JavaScript as it's a language I've worked with most recently and am most comfortable with. Being more familiar with JavaScript in the front-end, using Node in the console was an interesting challenge and learning opportunity that pushed me to grapple more fully with its asynchronous nature and really think about why my code was behaving the way it did.
 
 ### Dependencies
-As much as possible, I always try to use libraries minimally in order to produce an application that is simple and lightweight. Being a junior dev, I believe this enhances my learning as it compelled me to break down and step through the problem more granularly, and to think carefully about when and if an external library was a helper rather than a hindrance/bloat. A continual consideration of mine is the trade-off between efficiency and readability, both in terms of my code (for other developers, and myself in the future) and for the UI/user experience (for players).
+As much as possible, I always try to use libraries minimally in order to produce an application that is simple and lightweight. Being a junior dev, I believe this enhances my learning as it compels me to break down and step through the problem more granularly, and to think carefully about when and if an external library is a helper rather than a hindrance/bloat. A continual consideration of mine is the trade-off between efficiency and readability, both in terms of my code (for other developers, and myself in the future) and for the UI/user experience (for players).
 
 My decision-making around the libraries I did end up using were based on how to keep my code and UI readable, consistent and clean, with the questions I asked myself being:
 
@@ -117,12 +117,12 @@ My decision-making around the libraries I did end up using were based on how to 
 
 > Is this making my application simpler or more complex?
 
-For linting, **ESLint** was used to enforce code consistency while **Chalk** was used to style the UI. I used **Jest** for unit testing and mocking data/functions, which proved to a steep learning curve. I opted not to use Node's inbuilt readline module and use **Inquirer** instead to manage user inputs as I prefer a promise-based approach over callbacks where possible as this provides a better developer user experience, and inbuilt functionality for validation, parsing, prompting and error feedback.
+For linting, **ESLint** was used to enforce code consistency and best practices while **Chalk** was used to style the UI. I used **Jest** to try unit testing and mocking data/functions, which proved to be a steep learning curve. I opted not to use Node's inbuilt readline module and use **Inquirer** instead to manage user inputs as I prefer a promise-based approach over callbacks where possible as this provides a better developer user experience, and inbuilt functionality for validation, parsing, prompting and error feedback.
 
 ### Application Design Decisions
-Keeping the FMA brief's guideline to 'write the best code possible', many times throughout development, my decision-making wavered between keeping the application as clean, efficient and simple as possible and balancing my available time for refactoring and current skills/knowledge. As a junior dev, my desire to follow best practices and produce clean code and well-engineered solutions can often lead to paralysis analysis: *ahhhhh, what about tech debt?!*
+Keeping the FMA brief's guideline to 'write the best code possible', many times throughout development, my decision-making wavered between keeping the application as clean, efficient and simple as possible and balancing my available time for refactoring and current skills/knowledge. As a junior dev, my desire to follow best practices and produce clean code and well-engineered solutions can often lead to paralysis analysis:
 
-![](/docs/analysis-paralysis.png)
+![Analysis Paralysis](/docs/analysis-paralysis.png)
 
 My learning approach involves a continual push and pull between getting it done, and wanting (but not necessarily knowing) how to do things 'right' or 'perfectly' (if such a concept even exists). Discovering the conscious competence matrix has been a helpful mental model for capturing my feelings about my learning process as a developer - I'm constantly vacillating between feelings of cluelessness, growing pains and euphoria when it comes to my current skills and knowledge! For now, somewhere between the yellow and green square is the *'comfortable with feeling uncomfortable space'* I tend to occupy as I navigate the early stages of my career.
 
@@ -132,24 +132,24 @@ My learning approach involves a continual push and pull between getting it done,
 
 > Done is better than perfect.
 
-As I've practiced, I've come to better understand how to actually start, and learn how to improve from there, and the concepts above have guided my approach to problem-solving as a junior developer. I've accepted that being a developer means embracing change and uncertainty and accepting that all code is technical debt - every time I learn a better way of doing things (which is what should be happening), it makes all the code I've written in the past suboptimal.
+As I've practiced, I've come to better understand how to actually start, and learn how to improve from there, and the values above have guided my approach to problem-solving as a junior developer. I've accepted that being a developer means embracing change and uncertainty and accepting that all code is technical debt - every time I learn a better way of doing things (which is what should be happening), it makes all the code I've written in the past suboptimal.
 
 > Clean code always looks like it was written by someone who cares.
 
 However, as a junior dev continually building on my level of knowledge around firstly, how to do something, then how to do that something well, I've focused on demonstrating a high level of quality and care in the areas that I know I can do well, and to be honest and own the parts that haven't been done well or could be done better (usually either due to lack of time or current knowledge), and welcome feedback and teaching in the many areas I'm not sure about - rather than forcing myself to try and understand everything all at once.
 
 I've realised that it's most important/helpful for me (and others teaching/working with me) to:
-- Explain my thinking, opinions and code choices with colleagues and mentors to gauge my understanding;
-- Listen to my instincts, common sense, gut feeling or general 'code smells' around practices that feel inherently right or wrong;
-- Give things a go, ask lots of questions and continually welcome feedback and mentoring;
+- Explain my thinking, opinions and code choices with colleagues to gauge my understanding.
+- Listen to my instincts, common sense, gut feeling or general 'code smells' around practices that feel inherently right or wrong.
+- Give things a go, ask lots of questions and continually welcome feedback and mentoring.
 - Code reviews, code reviews, code reviews!
 
 ![Conscious Competence Stairs](/docs/conscious-competence-2.png)
 
 #### Modules/Functions
-Being new to software development design principles and patterns, I've found functional programming to be a really helpful approach, as getting started I try to break down then build towards a particular output or function, and then piece them each componnent together.
+Being new to software development design principles and patterns, I've found functional programming to be a really helpful approach for development, as getting started I try to break down then build towards a particular output or function, and then piece them each component together.
 
-With this in mind, my approach focused on following the below code principles as much as possible:
+With this in mind, my approach focused on following the below code principles:
 * **DRY**: Don't Repeat Yourself - creating functions that could be repeatedly invoked rather than writing similar lines of code.
 * **KISS**: Keep It Simple Stupid - creating clean, simple, readable and consistent code and interface, trying to keep functions lean and small.
 * **Maintainability**: Using descriptive and meaningful naming conventions, consistent styling and creating readable and extendable code friendly to other developers.
@@ -213,7 +213,7 @@ I'd like to use the code review as an opportunity to understand what I did well/
 * The player can follow the instructions/guide in the application header to understand how x-axis coordinates and y-axis coordinates are mapped on a 3 x 3 board.
 
 ## Conclusion
-Overall, I'm happy with what I was able to achieve completing this challenge in terms of the final state of the code and the UI. Being able to get a complete solution up and running is a huge win, and to me, the first step to everything. In future, I would focus on refactoring my code further, getting better at testing and learning about different application design approached I could've taken (such as an object-orientated).
+Overall, I'm happy with what I was able to achieve completing this challenge in terms of the final state of the code and the UI. Being able to get a complete solution up and running is a huge win, and to me, the first step to everything. In future, I would focus on refactoring my code further, getting better at testing and learning about different application design approaches I could've taken (such as an object-orientated).
 
 Each time I have an opportunity to complete a challenge like this I'll get better and better at it. Something imperfect but complete is better than something 'perfect' but unfinished, and it's important to me that I always aim to submit something regardless so that I can get feedback, as I believe personal goals (not just the final outcome) are an extremely important and healthy perspective to take on these things.
 
