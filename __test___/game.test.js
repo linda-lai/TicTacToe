@@ -81,7 +81,6 @@ describe('mocked functionality of updateGameBoard() should evaluate the player m
     expect(gameBoard[`${playerCoordinates}`]).toBeTruthy();
     expect(typeof gameBoard[`${playerCoordinates}`]).toBe('string');
   })
-
 })
 
 describe('it should check all combinations for a win', () => {
